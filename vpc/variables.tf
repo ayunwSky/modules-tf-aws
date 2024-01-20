@@ -8,6 +8,10 @@ variable "cloud" {
   type = string
 }
 
+variable "res_type" {
+  type = string
+}
+
 variable "vpc_name" {
   default = ""
   type    = string
@@ -46,10 +50,6 @@ variable "description" {
 variable "vpc_id" {
   default = ""
   type    = string
-}
-
-variable "res_type" {
-  type = string
 }
 
 variable "auto_assign_public_ip" {
