@@ -1,12 +1,12 @@
-# terraform {
-#   required_version = ">= v1.6.6"
-#   required_providers {
-#     aws = {
-#       source = "hashicorp/aws"
-#       version = "~> 5.32.1"
-#     }
-#   }
-# }
+terraform {
+  required_version = ">= v1.6.6"
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 5.32.1"
+    }
+  }
+}
 
 resource "aws_vpc" "vpc" {
   count = var.create && var.cloud == "aws" && var.res_type == "vpc" ? 1 : 0
