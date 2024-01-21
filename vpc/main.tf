@@ -2,7 +2,7 @@ terraform {
   required_version = ">= v1.6.6"
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 5.32.1"
     }
   }
@@ -32,8 +32,7 @@ resource "aws_subnet" "subnet" {
   availability_zone = var.az_name
   cidr_block        = var.subnet_cidr
 
-  map_public_ip_on_launch = var.auto_assign_public_ip
-
+  map_public_ip_on_launch                     = var.auto_assign_public_ip
   enable_resource_name_dns_a_record_on_launch = true
 
   tags = merge(

@@ -1,7 +1,7 @@
 variable "create" {
-    default = true
-    type = bool
-    description = "Whether to create resources"
+  default     = true
+  type        = bool
+  description = "Whether to create resources"
 }
 
 variable "cloud" {
@@ -22,6 +22,11 @@ variable "vpc_cidr" {
   type    = string
 }
 
+variable "vpc_id" {
+  default = ""
+  type    = string
+}
+
 variable "tags" {
   default = {}
   type    = map(string)
@@ -32,22 +37,17 @@ variable "subnet_name" {
   type    = string
 }
 
-variable "az_name" {
-  default = ""
-  type    = string
-}
-
 variable "subnet_cidr" {
   default = ""
   type    = string
 }
 
-variable "description" {
+variable "az_name" {
   default = ""
   type    = string
 }
 
-variable "vpc_id" {
+variable "description" {
   default = ""
   type    = string
 }

@@ -1,7 +1,7 @@
 variable "create" {
-    default = true
-    type = bool
-    description = "Whether to create resources"
+  default     = true
+  type        = bool
+  description = "Whether to create resources"
 }
 
 variable "cloud" {
